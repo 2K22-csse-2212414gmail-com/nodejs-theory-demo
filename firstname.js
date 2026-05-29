@@ -24,6 +24,10 @@ const linkdin=express();
 linkdin.use(express.json());
 linkdin.use(express.urlencoded({ extended: true }));
 
+linkdin.get('/ping', (req, res) => {
+  res.send("<h1>jinda hu</h1>")
+})
+
 const shukla=8001;
 linkdin.listen(shukla,()=>console.log(`shukla available on :${shukla}`));//follow mvc architecture
 linkdin.use("/Vedant",vedGit);//url/urlRoute USE BACKSLASH PROPERLY THEN WRIYE ROUTEs
